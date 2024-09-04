@@ -22,9 +22,8 @@ const Pokemon = ({ id }) => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
-
   console.log(pokemon);
-  
+
   return (
     <div>
       <h2>#{id}</h2>
@@ -48,11 +47,9 @@ export const PokemonPager = () => {
       <button type="button" onClick={() => setId(id !== 1 ? id - 1 : 250)}>
         Previous
       </button>
-
       <button type="button" onClick={() => setId(id !== 250 ? id + 1 : 1)}>
         Next
       </button>
-
       <Pokemon id={id} />
     </div>
   );
